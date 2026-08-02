@@ -1,6 +1,6 @@
 cask "schism-tracker" do
-  version "20250728"
-  sha256 "da183ba39ae38fe1fb4b2bdcb036b3487beb77bb67d0c54e9c9b437a00449a0f"
+  version "20260524"
+  sha256 "c4f389b52bb6d60a4a004c5db9bbbcdecb8b8a5a086f45c2aa31c4f1df51333d"
 
   url "https://github.com/schismtracker/schismtracker/releases/download/#{version}/schismtracker-#{version}-macos.zip"
   name "Schism Tracker"
@@ -11,6 +11,8 @@ cask "schism-tracker" do
     url :url
     regex(/^v?(\d+(?:\.\d+)*)$/i)
   end
+
+  depends_on macos: :big_sur
 
   app "Schism Tracker.app"
 
